@@ -16,6 +16,7 @@ socketio = SocketIO(app)
 # Make the WSGI interface available at the top level so wfastcgi can get it.
 #wsgi_app = app.wsgi_app
 
+#Data Used to store users chatlogs
 UserData = {
       "UserchatLogs": [],
       "ResponseLogs": [] 
@@ -60,8 +61,8 @@ def MessageSentEvent(json, methods=['GET', 'POST']):
     print('received my event: ' + str(myData))
     returnData = interpretMessage(str(myData["message"]))
     socketio.emit('my response', returnData)
-    
 
+#Main Dev Server to test on
 if __name__ == '__main__':
     import os
     HOST = os.environ.get('SERVER_HOST', 'localhost')
