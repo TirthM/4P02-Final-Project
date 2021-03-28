@@ -1,17 +1,14 @@
 """
 This script runs the application using a development server.
 It contains the definition of routes and views for the application.
-"""
+ """
 
-from flask import Flask, render_template, session
-from flask_socketio import SocketIO
+from flask import Flask, render_template, session, request ,jsonify
 import json
 import os
 import secrets
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = secrets.token_urlsafe(16)
-socketio = SocketIO(app)
 
 # Make the WSGI interface available at the top level so wfastcgi can get it.
 #wsgi_app = app.wsgi_app
@@ -49,18 +46,13 @@ def interpretMessage(msg):
     }
     return messageData
 
-@socketio.on('UserConnectEvent')
-def UserConnectsEvent(json, methods=['GET', 'POST']):
-    myData = json
-    print('received my event: ' + str(myData))
-    socketio.emit('UserID', myData)
+@app.route('/join', methods=['GET','POST'])
+def handle_input():
+    text = request.form['msg']
+    result = interpretMessage(str(text))
+    result = {str(key): value for key, value in result.items()}
+    return jsonify(result=result);
 
-@socketio.on('MessageEvent')
-def MessageSentEvent(json, methods=['GET', 'POST']):
-    myData = json
-    print('received my event: ' + str(myData))
-    returnData = interpretMessage(str(myData["message"]))
-    socketio.emit('my response', returnData)
 
 #Main Dev Server to test on
 if __name__ == '__main__':
@@ -70,6 +62,5 @@ if __name__ == '__main__':
         PORT = int(os.environ.get('SERVER_PORT', '5555'))
     except ValueError:
         PORT = 5555
-    socketio.run(app, HOST, PORT)
-
+    app.run(HOST,PORT)
 
