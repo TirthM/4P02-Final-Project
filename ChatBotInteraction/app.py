@@ -1,27 +1,30 @@
-"""
-This script runs the application using a development server.
-It contains the definition of routes and views for the application.
- """
 
 from flask import Flask, render_template, session, request ,jsonify
+from flask_session import Session
 import json
 import os
 import secrets
 app = Flask(__name__)
-
-
+app.config['SECRET_KEY'] = "some_random"
+app.config['SESSION_TYPE'] = 'filesystem'
+app.config['SESSION_PERMANENT']= False
 # Make the WSGI interface available at the top level so wfastcgi can get it.
 #wsgi_app = app.wsgi_app
 
-#Data Used to store users chatlogs
-UserData = {
-      "UserchatLogs": [],
-      "ResponseLogs": [] 
+#Data Used to store users chatlogs NOTE: THIS DATA SHOULD BE TEMPORARY AS THIS WILL NOT WORK WITH MULTIPLE USERS WE NEED A DATA BASE TO STORE USER INFORMATION
+
+chatlogs = {
+    "userChatLogs": [],
+    "responseChatLogs": []
     }
+
+Session(app)
 
 @app.route('/')
 def sessions():
-    """Renders a sample page."""
+    if ('userLogs' not in session and 'responseLogs' not in session) :
+        session['userLogs'] = []
+        session['responseLogs'] = []
     return render_template('form.html')
 
 def interpretMessage(msg):
@@ -34,8 +37,6 @@ def interpretMessage(msg):
     else:
         print("Search for Response using msg")
         response = "Hello this is a default response as this part is not implemented yet"
-        UserData["UserchatLogs"].append(str(msg))
-        UserData["ResponseLogs"].append(response)
         inputType = "question"
         
 
@@ -50,6 +51,15 @@ def interpretMessage(msg):
 def handle_input():
     text = request.form['msg']
     result = interpretMessage(str(text))
+    if request.method == "POST":
+        userLogs = result["message"]
+        responseLogs = result["response"]
+        if ('userLogs' in session and 'responseLogs' in session) :
+            chatlogs["userChatLogs"].append(str(userLogs))
+            chatlogs["responseChatLogs"].append(str(responseLogs))
+            session['userLogs'] = chatlogs["userChatLogs"]
+            session['responseLogs'] = chatlogs["responseChatLogs"]
+            
     result = {str(key): value for key, value in result.items()}
     return jsonify(result=result);
 

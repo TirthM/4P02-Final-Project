@@ -8,8 +8,18 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
       </script>
 
-      <h3 style='color: #ccc;font-size: 30px;'>No message yet..</h3>
-      <div class="message_holder"></div>
+      <h3 style='color: #ccc; font-size: 30px;'>No message yet..</h3>
+      <div class="message_holder">
+          {% if session['userLogs'] and session['responseLogs'] %}
+          {% for userlog in session['userLogs'] %}
+          <div><b style='color: #000'>You</b> {{ userlog }}</div>
+          
+          <div><b style='color: #000'>ChatBot</b> {{ session['responseLogs'][loop.index0] }}</div>
+
+          {% endfor %}
+          <script>$('h3').remove()</script>
+          {% endif %}
+      </div>
 
       <script>
           function printResponse() {
