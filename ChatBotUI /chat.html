@@ -10,21 +10,50 @@
             <i class="fas fa-times"></i>
         </label>
         <div class="wrapper">
-            <div class="head-text">Welcome to ChatBot!</div>
-            <div class="chat-menu">
-                <div class="desc-text">Fill out the form below to begin chat session.</div>
-                <form action="#">
-                    <div class="field">
-                        <input type="text" placeholder="Your Name" required>
+            <div class="head-text page-title-1 show">Welcome to ChatBot!</div>
+            <div class="head-text page-title-2">ChatBot - Online</div>
+            <div class="chat-area">
+                <div class="page page-1 slide-page">
+                    <div class="chat-menu">
+                        <div class="desc-text">Fill out the form below to begin chat session.</div>
+                        <form action="#" id="chat-form"> 
+                            <div class="">
+                                <div class="field">
+                                    <input type="text" placeholder="Your Name" required>
+                                </div>
+                                <div class="field">
+                                    <input type="email" placeholder="Your Email Address" required>
+                                </div>
+                                <div class="field">
+                                    <input type="text" placeholder="What May I Help You With?" required>
+                                </div>
+                                <div class="field">
+                                    <button type="submit">Start Chat</button>
+                                </div> 
+                            </div>
+                        </form>
+                    </div> 
+                </div> 
+                <div class="page page-2">
+                    <div class="chat-menu2">
+                        <form action="#" id="chat-form2">  
+                            <div class="">                 
+                                </div>
+                            </div>  
+                        </form>
                     </div>
-                    <div class="field">
-                        <input type="email" placeholder="Your Email Address" required>
-                    </div>
-                    <div class="field">
-                        <button type="submit">Start Chat</button>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
+        <script type="text/javascript">
+            let chatbtn  = document.querySelector('#chat-form');
+
+            chatbtn.addEventListener("submit", function(e){                  
+                 document.querySelector('.page-1').classList.add("slide-right");
+                 document.querySelector('.page-title-1').classList.remove("show");
+                 document.querySelector('.page-title-2').classList.add("show");
+                 document.querySelector('.page-2').classList.add("slide-page");
+            });
+        </script>
     </body>
 </html>
