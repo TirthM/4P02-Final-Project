@@ -7,7 +7,10 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ChatBotInteraction", "ChatB
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DE0E40D3-C615-4BF8-961D-E5633877E150}"
 	ProjectSection(SolutionItems) = preProject
+		ChatBotInteraction\templates\chat.html = ChatBotInteraction\templates\chat.html
+		ChatBotInteraction\static\styles\design.css = ChatBotInteraction\static\styles\design.css
 		ChatBotInteraction\templates\form.html = ChatBotInteraction\templates\form.html
+		ChatBotInteraction\static\scripts\messageHandler.js = ChatBotInteraction\static\scripts\messageHandler.js
 	EndProjectSection
 EndProject
 Global
