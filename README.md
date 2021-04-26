@@ -12,4 +12,8 @@ Group Members:
 Tirth Mehta (6039812)
 <br>
 Marlon Ramnarais (6039275)
-
+<br>
+Harveer Khangura (6052674)
+<br>
+Mazin Bamohrez (6157861)
+<br>
