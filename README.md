@@ -8,6 +8,7 @@ Term: Winter 2021
 Instructor: Professor Naser Ezzati-Jivan
 
 Group Members:
+<br>
 Tirth Mehta (6039812)
 <br>
 Marlon Ramnarais (6039275)
