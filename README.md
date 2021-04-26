@@ -6,7 +6,8 @@ Final Group Project 4P02
 **TERM:** Winter 2021
 <br>
 **INSTRUCTOR:** Professor Naser Ezzati-Jivan
-
+<br>
+<br>
 **GROUP MEMBERS:**
 <br>
 Tirth Mehta (6039812)
@@ -20,4 +21,5 @@ Mazin Bamohrez (6157861)
 Matthew Snow (6051981)
 <br>
 Jose Valdez (5941323)
+<br>
 <br>
