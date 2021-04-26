@@ -1,13 +1,13 @@
 # 4P02-Final-Project
 Final Group Project 4P02
 
-**Project:** Interactive Chat Bot for Brock University.
+**PROJECT:** Interactive Chat Bot for Brock University.
 <br>
-**Term:** Winter 2021
+**TERM:** Winter 2021
 <br>
-**Instructor:** Professor Naser Ezzati-Jivan
+**INSTRUCTOR:** Professor Naser Ezzati-Jivan
 
-**Group Members:**
+**GROUP MEMBERS:**
 Tirth Mehta (6039812)
 <br>
 Marlon Ramnarais (6039275)
