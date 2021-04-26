@@ -8,6 +8,7 @@ Final Group Project 4P02
 **INSTRUCTOR:** Professor Naser Ezzati-Jivan
 
 **GROUP MEMBERS:**
+<br>
 Tirth Mehta (6039812)
 <br>
 Marlon Ramnarais (6039275)
