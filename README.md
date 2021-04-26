@@ -8,7 +8,6 @@ Term: Winter 2021
 Instructor: Professor Naser Ezzati-Jivan
 
 Group Members:
-<br>
 Tirth Mehta (6039812)
 <br>
 Marlon Ramnarais (6039275)
@@ -16,4 +15,8 @@ Marlon Ramnarais (6039275)
 Harveer Khangura (6052674)
 <br>
 Mazin Bamohrez (6157861)
+<br>
+Matthew Snow (6051981)
+<br>
+Jose Valdez (5941323)
 <br>
