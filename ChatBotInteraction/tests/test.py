@@ -1,5 +1,10 @@
 import unittest
-from . import app
+import os, sys
+currentdir = os.path.dirname(os.path.realpath(__file__))
+parentdir = os.path.dirname(currentdir)
+sys.path.append(parentdir)
+import app
+
 class TestApp(unittest.TestCase):
     def test_chatbot_response(self):
         response = app.getChatbotResponse("Hello")
