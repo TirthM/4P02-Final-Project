@@ -1,9 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <link rel="stylesheet" href="{{ url_for('static', filename='styles/design.css') }}">
     </head>
-    <body>
+    <body style = "        background: url(https://brocku.ca/media-room/wp-content/uploads/sites/61/DJI_0084.jpg?x37390)">
+        <style>
+
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+
+
+            ::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+
+
+            ::-webkit-scrollbar-thumb {
+                background: #888;
+            }
+
+
+                ::-webkit-scrollbar-thumb:hover {
+                    background: #555;
+                }
+
+            .message_holder {
+                max-height: 340px;
+                min-height: 340px;
+                overflow-y: scroll;
+            }
+        </style>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
         </script>
@@ -23,40 +50,56 @@
                         <form action="#" id="chat-form">
                             <div class="">
                                 <div class="field">
-                                    <input type="text" placeholder="Your Name" required>
+                                    <input type="text" id="username" name="username" placeholder="Your Name" required>
                                 </div>
                                 <div class="field">
-                                    <input type="email" placeholder="Your Email Address" required>
+                                    <input type="email" id="email" name="email" placeholder="Your Email Address" required>
                                 </div>
                                 <div class="field">
-                                    <input type="text" placeholder="What May I Help You With?" required>
+                                    <input type="text" id="chatname" name="chatname" placeholder="What May I Help You With?" required>
                                 </div>
                                 <div class="field">
-                                    <button type="submit">Start Chat</button>
+                                    <button type="submit" onclick="startSession()">Start Chat</button>
                                 </div>
+                                <script src="{{url_for('static', filename='scripts/startUp.js')}}"></script>
                             </div>
                         </form>
                     </div>
                 </div>
-                <div class="page page-2">
-                    <div class="chat-menu2">
-                            <div class="">
-                                <div class="field">
-                                    <h3 style='color: #ccc; font-size: 30px;'>No message yet..</h3>
-                                    <div class="message_holder">
-                                    </div>
+                <div class="page page-2" id="chatting-area">
+                    <div class="chat-area">
+                        <div class="">
 
-                                    <script src="{{url_for('static', filename='scripts/messageHandler.js')}}"></script>
+                            <div class="chat_field">
 
-                                    <input type="text" class="message" placeholder="Messages" id="msg" name="msg" />
-                                    <button onclick="printResponse()">Submit</button>
+                                <div class="message_holder">
 
                                 </div>
+
+                                <script src="{{url_for('static', filename='scripts/messageHandler.js')}}"></script>
+
+                                <input class="text-input" type="text" placeholder="Messages" id="msg" name="msg" required />
+                                <button class="button-input" id="enterMsg" onclick="printResponse()">Submit</button>
+
                             </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        {% if session['active'] == 'true' %}
+        <script type="text/javascript">
+        document.querySelector('.page-1').classList.add("slide-right");
+        document.querySelector('.page-title-1').classList.remove("show");
+        document.querySelector('.page-title-2').classList.add("show");
+        document.querySelector('.page-2').classList.add("slide-page");
+        $('div.message_holder').append("<div class='chatbotTextTitle'><b>Chatbot</b></div>");
+        var botMsg = "<div class='bot-bubble border round'>Welcome ";
+        botMsg +=  "back to the Brock University Chatbot. I've cleared the chat bubbles for you. Use !help for help. </div>"
+        $('div.message_holder').append(botMsg);
+        </script>
+        {% endif %}
 
         <script type="text/javascript">
             let chatbtn = document.querySelector('#chat-form');
@@ -67,7 +110,35 @@
                 document.querySelector('.page-title-1').classList.remove("show");
                 document.querySelector('.page-title-2').classList.add("show");
                 document.querySelector('.page-2').classList.add("slide-page");
+                document.querySelector('.page-2').classList.remove("slide-right");
             });
+
+            // Get the input field
+            var input = document.getElementById("msg");
+
+            // Execute a function when the user releases a key on the keyboard
+            input.addEventListener("keyup", function (event) {
+                // Number 13 is the "Enter" key on the keyboard
+                if (event.keyCode === 13) {
+                    // Cancel the default action, if needed
+                    event.preventDefault();
+                    // Trigger the button element with a click
+                    document.getElementById("enterMsg").click();
+                }
+            });
+
+            function returnToMenu() {
+
+                document.querySelector('.page-2').classList.add("slide-right");
+                document.querySelector('.page-title-2').classList.remove("show");
+                document.querySelector('.page-title-1').classList.add("show");
+                document.querySelector('.page-1').classList.add("slide-page");
+                document.querySelector('.page-1').classList.remove("slide-right");
+
+                $("div.message_holder *").remove();
+                msgLock = false;
+            }
+
         </script>
     </body>
 </html>

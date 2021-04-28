@@ -1,0 +1,130 @@
+{"intents": [
+  {"topic": "greetings",
+  "patterns": ["Hi","hello", "hi", "hey", "greetings", "good day", "Hello"],
+  "responses": ["Hi, I am the Brock Chat bot, how may I help you?"]
+  },
+  {"topic": "Reminder" ,
+    "patterns":["still here", "did you go", "there", "still there"],
+    "responses":["Yes, I am still here!"]
+  },
+  {"topic":  "further questions",
+  "patterns": ["thank you!", "thanks!", "perfect", "wonderful", "this is great", "thank you for your help", "okay, thanks", "this was helpful"],
+  "responses": ["Perfect! Do you have any other questions or concerns for me?"]
+  },
+  {"topic": "Incorrect Response" ,
+    "patterns": ["did not help", "does not answer my question", "did not answer my question", "didn't answer my question", "thats no help"],
+    "responses":["Please accept my sincerest apologies in providing you with an insufficient answer to your question/concern. Please rephrase or restate your question. If I am unable to answer correctly, please type this command !insert and we will send your question to our technical team for review."]
+  },
+  {"topic": "Brock Address",
+    "patterns": ["Brock Mailing Address","Brock Street Address", "Brock University's Address", "Brock university location", "locate Brock", "the address to brock university"],
+    "responses": ["Brock University currently resides in St Catharine's Ontario. Here is the following address: Niagara Region, 1812 Sir Isaac Brock Way, St. Catharines, ON, L2S 3A1 Canada"]
+  },
+  {"topic": "Program" ,
+    "patterns": ["Academic Programs", "Undergraduate Programs", "UnderGraduate Program Info", "graduate program"],
+    "responses":["Thank you for sharing your interest in our Brock University Program Selection. You can find information of the undergraduate programs we offer at Brock University by visiting the following: https://brocku.ca/programs/ . For information about the Graduate Programs we offer at Brock, please follow the following link: https://brocku.ca/programs/graduate"]
+  },
+  {"topic":  "yes, other questions",
+  "patterns": ["I do", "yes", "Yes, I need more help", "I have another question", "I have other questions", "another question", "other question", "I need help","help me"],
+  "responses": ["Okay, What is your question, or can you further elaborate?"]
+  },
+  {"topic":  "Goodbye",
+  "patterns": ["nope", "stop","no", "don't have any other questions", "do not have any other questions", "for your help. Bye", "goodbye", "bye", "am good", "am good for now", "you answered everything"],
+  "responses": ["Thank you for using Brock University's Chat Bot, please use the !end command to close this chat. Have a Great Day!"]
+  },
+  {"topic": "Policies",
+  "patterns": ["access Brock's policies", "Brock's academic regulations", "university policies", "university regulations", "Brock's academic policies", "Brock Policy", "Brock Regulation"],
+  "responses": ["I am happy to help you with your question about Brock’s academic regulations and University policies. I highly suggest navigating to the following website URL as your Brock Regulation and Policy inquiries can be accessed from the current year’s undergraduate calendar: https://brocku.ca/webcal/2019/undergrad/areg.html"]
+  },
+  {"topic":  "sakai",
+  "patterns": ["is isaak", "is sakai", "use isaak", " help with sakai", "Sakai", "SAKAI"],
+  "responses": ["Thank you for providing your question about Brock University's SAKAI. SAKAI facilitates learning by creating private communities for the exchange of information such as dates, files, notes, and other resources. The site also provides communication tools including mail and discussion boards. SAKAI located at https://kumu.brocku.ca/sakai/FAQ. The Direct link to SAKAI can be found here: https://lms.brocku.ca/"]
+  },
+  {"topic": "important dates",
+    "patterns": ["important dates", "Registration date", "date"],
+    "responses": ["You may find all important date information for all sessions and programs at Brock University. Please access the following link in order to view the important dates for this Academic Year's Calendar: https://brocku.ca/important-dates/"]
+  },
+  {"topic": "Brock News" ,
+    "patterns":["news updates", "News", "brock news", "find brock news"],
+    "responses":["The Brock News is a University media outlet and information hub to catch all the updates happening around and within the Brock University community. You can find all the news through the following: https://brocku.ca/brock-news/"]
+  },
+  {"topic": "contact" ,
+    "patterns": ["contact", " contact information", "phone number"],
+    "responses":["All of our contact information is readily available through our website. You can find all of our contact information through this link: https://brocku.ca/contact/ "]
+  },
+  {"topic": "Emergency Phone numbers" ,
+    "patterns": ["Emergency list", "emergency", "emergency numbers", "list of emergency numbers"],
+    "responses":["A list of important emergency numbers for campus and in the Niagara community can be found here : https://brocku.ca/directory/emergency-numbers/"]
+  },
+  {"topic": "Corona Virus Update" ,
+    "patterns": ["covid", "quarantine", "covid-19", "corona", "corona virus", "pandemic"],
+    "responses":["Brock is committed to delivering to students a high-quality education and providing an outstanding experience while taking steps to address COVID-19. You may find all of our COVID-19 updates by visiting our Updates page: https://brocku.ca/coronavirus/ "]
+  },
+  {"topic": "Online Directory" ,
+    "patterns": ["Directory", "contact professor", "contact staff member", "staff directory", "faculty directory", "fax lines", "building codes"],
+    "responses":["A full listing of the Brock University faculty and staff directory can be found here : https://brocku.ca/directory/. However, If you are calling from outside of the university, the main number is 905-688-5550."]
+  },
+  {"topic": "Services A-Z" ,
+    "patterns": ["list of services", "administrative offices", "A-Z services"],
+    "responses":["A list of services and administrative offices that are either part of or affiliated with Brock University can be found here : https://brocku.ca/directory/emergency-numbers/"]
+  },
+  {"topic": "ITS" ,
+    "patterns": ["email issue", "desktop issue", "laptop issue", "wifi", "account disabled", "compromised account", "reset password", "software installation", "console setup", "phishing", "virus", "error", "reset my password"],
+    "responses":["For more information or guidance regarding your technology related inquiry, please contact our ITS services for more help at https://brocku.ca/information-technology/helpdesk/"]
+  },
+  {"topic": "Careers" ,
+    "patterns": ["job application", "apply for work at brock", "brock jobs", "brock work opportunities", "job postings", "internal job postings", "careers at brock", "apply for a job"],
+    "responses":["Thank you for expressing your interest in working here, at Brock University. Careers are built at Brock. We offer unique opportunities in leadership, teaching, research, student support services and administration. For more information about careers at Brock, please follow this link: https://brocku.ca/careers. External Job Postings: https://brocku.wd3.myworkdayjobs.com/brocku_careers Internal Job Postings: https://adfs.brocku.ca/adfs/ls/idpinitiatedSignon.aspx?loginToRp=https://wd3.myworkday.com/brocku/login-saml.flex (Please have your BrockU login ready)"]
+  },
+  {"topic": "Library" ,
+    "patterns": ["Research", "library tools", "sources on a topic", "library service", "library", "librarian service", "contact library"],
+    "responses":["I am happy to help push you to the right direction with your library related inquiry. Please visit us at https://brocku.ca/library/. If you wish to speak with a librarian for more help, you may use our 'Chat with a Librarian'. app here: https://brocku.ca/library/help/chat/. We are happy to answer any of your questions relating topic sources, library tools and more. If you wish to contact the library directly, please click on the following link to be directed to our 'contact us' page: https://brocku.ca/library/contact/"]
+  },
+  {"topic": "events" ,
+    "patterns": ["events at brock", "events", "special events", "upcoming events", "brock events"],
+    "responses":["It looks like you are looking for information about events happening around Brock. I kindly suggest following this link to seek your desired information! https://experiencebu.brocku.ca/events"]
+  },
+  {"topic": "visit" ,
+    "patterns": ["visit brock", "campus tour", "virtual visit", "visit", "campus map", "explore niagara", "visiting brock"],
+    "responses":["Thank you for expressing your interest in visiting Brock University and the Niagara Region. You can obtain more information about visiting us at https://brocku.ca/about/visit-brock"]
+  },
+  {"topic": "No specific response" ,
+    "patterns":["cosc", "COSC", "food", "open", "COSC department", "computer science"],
+    "responses":["I am unable to understand your question, I kindly ask that you provide me with more information or type the !insert command to log your question or concern for review."]
+  },
+  {"topic": "About" ,
+    "patterns":["go to Brock", "attending Brock", "attend brock", "going to brock", "enrolling at Brock", "enroll", "brock all about"] ,
+    "responses":["It is exciting to hear about your interest in Brock University! Brock University is one of Canada's top post-secondary institutions. Located in historic Niagara region, Brock offers all the benefits of a young and modern university in a safe, community-minded city with beautiful natural surroundings. For more information about us, please follow the link: https://brocku.ca/about/ "]
+  },
+  {"topic":  "Degree Requirements",
+    "patterns": ["find my program requirements", "degree requirements", "find my Program's Degree requirements", "requirements"],
+    "responses": ["Undergraduate calendars for specific departments and programs can be accessed through the University’s undergraduate calendar webpage. It is important to be in continued contact with your academic adviser in order to ensure that you are meeting your degree requirements.The undergraduate calendar for the current year can be accessed here: https://brocku.ca/webcal/current/undergrad/ "]
+  },
+  {"topic":  "Major",
+    "patterns": ["change major", "declare major", "change my major", "declare a new major", "I want to change my major"],
+    "responses": [" I can certainly assist you with your University Major inquiry. In order to declare or change majors or if you wish to learn more about this topic, please visit this form: https://brocku.ca/webfm/Declare_or_Change_Majors.pdf"]
+  },
+  {"topic":  "Tuition",
+    "patterns": ["pay my tuition", "tuition", "tuition information"],
+    "responses": ["For more information on how to make a payment, please visit: https://brocku.ca/safa/tuition-and-fees/making-a-payment/"]
+  },
+  {"topic":  "Health Insurance",
+    "patterns": ["opt-in/opt-out of the health and dental insurance plan?", "dental insurance", "health insurance", "opt-in health insurance", "opt-in dental insurance", "opt-out health insurance", "opt-out dental insurance"],
+    "responses": ["Students with comparable coverage have the opportunity to opt in-out of through: https://www.studentvip.ca/SchoolSelect.aspx"]
+  },
+  {"topic":  "Fees",
+    "patterns": ["find information about ancillary fees?", "ancillary fees", "fees information"],
+    "responses": ["Please visit the Brock BUSU website for full details: https://www.brockbusu.ca/fees/ "]
+  },
+  {"topic":  "Advisor",
+    "patterns": ["Academic Advisor and book an advising appointment", "academic advisor", "advisor", "academic advisor appointment", "book an advising appointment", "appointment with an academic advisor","my academic advisor"],
+    "responses": ["A full list of Academic Advisors can be found online at: https://brocku.ca/academic-advising/find-your-advisor/?gclid=EAIaIQobChMIqp-07_CE6wIVga_ICh22FgtrEAAYASAAEgKJu_D_BwE&gclsrc=aw.ds"]
+  },
+  {"topic":  "Student services",
+    "patterns": ["more about the student services that are available to students", "student services", "services", "student service information"],
+    "responses": ["A full list of student services and departments can be found at: https://brocku.ca/directory/a-z/ "]
+  },
+  {"topic": "no response" ,
+    "patterns":["don't have one", "no question", "don't have a question"],
+    "responses":["If you have no inquiries, Please use the !end command to end this chat. Thank you."]
+  }
+]}

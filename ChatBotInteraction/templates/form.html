@@ -10,15 +10,18 @@
 
       <h3 style='color: #ccc; font-size: 30px;'>No message yet..</h3>
       <div class="message_holder">
+          {% if session['active'] == "true" %}
+          <div>{{session['userID']}}</div>
+          {% endif %}
           <!--{% if session['userLogs'] and session['responseLogs'] %}
-        {% for userlog in session['userLogs'] %}
-        <div><b style='color: #000'>You</b> {REMOVEME{ userlog }}</div>
+    {% for userlog in session['userLogs'] %}
+    <div><b style='color: #000'>You</b> {REMOVEME{ userlog }}</div>
 
-        <div><b style='color: #000'>ChatBot</b> {REMOVEME{ session['responseLogs'][loop.index0] }}</div>
+    <div><b style='color: #000'>ChatBot</b> {REMOVEME{ session['responseLogs'][loop.index0] }}</div>
 
-        {% endfor %}
-        <script>$('h3').remove()</script>
-        {% endif %}-->
+    {% endfor %}
+    <script>$('h3').remove()</script>
+    {% endif %}-->
       </div>
 
       <script src="{{url_for('static', filename='scripts/messageHandler.js')}}"></script>
