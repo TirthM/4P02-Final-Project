@@ -5,10 +5,10 @@
   },
   {"topic": "Reminder" ,
     "patterns":["still here", "did you go", "there", "still there"],
-    "responses":["Yes, I am still here!"]
+    "responses":["Yes, I am still here! How may I help you?"]
   },
   {"topic":  "further questions",
-  "patterns": ["thank you!", "thanks!", "perfect", "wonderful", "this is great", "thank you for your help", "okay, thanks", "this was helpful"],
+  "patterns": ["thank you!", "thanks!", "perfect", "wonderful", "this is great", "thank you for your help", "okay, thanks", "this was helpful", "awesome", "cool", "thanks alot"],
   "responses": ["Perfect! Do you have any other questions or concerns for me?"]
   },
   {"topic": "Incorrect Response" ,
@@ -16,7 +16,7 @@
     "responses":["Please accept my sincerest apologies in providing you with an insufficient answer to your question/concern. Please rephrase or restate your question. If I am unable to answer correctly, please type this command !insert and we will send your question to our technical team for review."]
   },
   {"topic": "Brock Address",
-    "patterns": ["Brock Mailing Address","Brock Street Address", "Brock University's Address", "Brock university location", "locate Brock", "the address to brock university"],
+    "patterns": ["Brock Mailing Address","Brock Street Address", "Brock University's Address", "Brock university location", "locate Brock", "the address to brock university", "brock located", "city is brock in"],
     "responses": ["Brock University currently resides in St Catharine's Ontario. Here is the following address: Niagara Region, 1812 Sir Isaac Brock Way, St. Catharines, ON, L2S 3A1 Canada"]
   },
   {"topic": "Program" ,
@@ -24,7 +24,7 @@
     "responses":["Thank you for sharing your interest in our Brock University Program Selection. You can find information of the undergraduate programs we offer at Brock University by visiting the following: https://brocku.ca/programs/ . For information about the Graduate Programs we offer at Brock, please follow the following link: https://brocku.ca/programs/graduate"]
   },
   {"topic":  "yes, other questions",
-  "patterns": ["I do", "yes", "Yes, I need more help", "I have another question", "I have other questions", "another question", "other question", "I need help","help me"],
+  "patterns": ["I do", "yes", "Yes, I need more help", "I have another question", "I have other questions", "another question", "other question", "need help","help me"],
   "responses": ["Okay, What is your question, or can you further elaborate?"]
   },
   {"topic":  "Goodbye",
